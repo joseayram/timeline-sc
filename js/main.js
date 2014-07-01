@@ -2,6 +2,7 @@ $(function() {
 
   var configYML = YAML.load('estimate.yml');
   var flag = true;
+  var number = 0;
         
   configYML.forEach(loopElements);
 
@@ -48,7 +49,7 @@ $(function() {
 
     $firstContainer = createFirstContainer(strSide);
     $secondContainer = createSecondContainer(strSide);
-    $title = createTitle(index+1, configYML[index].iteration.hours);
+    $title = createTitle(configYML[index].iteration.hours);
     $tasks = createTasks(index);
     
     $secondContainer.append($title);
@@ -76,7 +77,8 @@ $(function() {
   /**
    * @return String <h4>Iteration #1 - 40 hours</h4> 
    */
-  function createTitle(number, hours) {
+  function createTitle(hours) {
+    number = number + 1;
     return $("<h4>", {text: "Iteration #"+number+" - "+hours+" hours"});
   }
   
