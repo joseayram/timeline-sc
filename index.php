@@ -22,31 +22,6 @@
         <div class="container">
           <ul class="timeline">
             <li class="month">JUNE</li>
-            <li class="animated fadeInRight visible" data-animation="fadeInRight">
-              <div class="timeline-panel right">
-                <h4>Iteration #1 - 40 hours</h4> 
-                <p>
-                  <ul>
-                    <li>Base App Config</li>
-                    <li>User Modeling</li>
-                    <li>User Session Manage</li>
-                    <li>User Sign facebook</li>
-                  </ul>
-                </p>
-              </div>
-            </li>
-            <li class="animated fadeInLeft visible" data-animation="fadeInLeft">
-              <div class="timeline-panel left">
-                <h4>Iteration #2 - 40 hours</h4> 
-                <p>
-                  <ul>
-                    <li>Linkedin Api Integration</li>
-                    <li>Build Your Own Profile (slide 1,2,3,4)</li>
-                    <li>Start Home Dashboard</li>
-                  </ul>
-                </p>
-              </div>
-            </li>
           </ul>
       </div>
     </section>

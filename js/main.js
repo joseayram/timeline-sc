@@ -14,10 +14,10 @@ $(function() {
     $firstContainer = createFirstContainer(strSide);
     $secondContainer = createSecondContainer(strSide);
     $title = createTitle(index+1, configYML[index].iteration.hours);
-    $paragraph = $("<p>");
+    $tasks = createTasks(index);
     
     $secondContainer.append($title);
-    $secondContainer.append($paragraph);
+    $secondContainer.append($tasks);
     $firstContainer.append($secondContainer);
 
     $(".timeline").append($firstContainer);
@@ -70,7 +70,17 @@ $(function() {
   /**
    * @return String <li>Task Description</li>
    */ 
-  function createTask(name) {
+  function createTasks(index) {
+    count = configYML[index].iteration.tasks.length;
+    tasks = configYML[index].iteration.tasks;
+    $p = $("<p>");
+    $ul = $("<ul>");
+     
+    for(i=0; i<count; i++) {
+      $ul.append($("<li>", {text: tasks[i].task}));
+    }
+
+    return $p.append($ul);
 
   }
     
