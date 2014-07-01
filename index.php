@@ -16,7 +16,7 @@
   <body>
     <section id="history">
       <div class="title">
-        <h1>ESTIMATE</h1>
+        <h1>ESTIMATES</h1>
         <hr>
       </div>
         <div class="container">
