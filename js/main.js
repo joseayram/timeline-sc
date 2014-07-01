@@ -1,49 +1,77 @@
 $(function() {
-  
-  $(".timeline").append(addliBox('Right'));
-  $(".timeline").append(addMonth('july'));
 
+  var configYML = YAML.load('estimate.yml');
+  var flag = true;
+        
+  configYML.forEach(loopElements);
 
+  /**
+   * Loop all Elements in Yaml File
+   */
+  function loopElements(element, index, array) {
+    strSide = side();
+
+    $firstContainer = createFirstContainer(strSide);
+    $secondContainer = createSecondContainer(strSide);
+    $title = createTitle(index+1, configYML[index].iteration.hours);
+    $paragraph = $("<p>");
+    
+    $secondContainer.append($title);
+    $secondContainer.append($paragraph);
+    $firstContainer.append($secondContainer);
+
+    $(".timeline").append($firstContainer);
+  }
+
+  /**
+   * Return the side of the boxes
+   * @return String
+   */
+  function side() {
+    if (flag == true) {
+      flag = false;
+      return 'Right';
+    } else {
+      flag = true;
+      return 'Left'
+    }
+
+  }
+
+  /**
+   * @return <li class="month">MONTH</li>
+   */
   function addMonth(monthName) {
     return $("<li>", {text: monthName.toUpperCase(), class: "month"});
   }
 
-  function addIteration() {
-    
-  }
-
-  function addliBox(side) {
+  /**
+   * @return String <li class="animated visible fadeInLeft fadeInRight" data-animation="fadeInLeft"></li>
+   */
+  function createFirstContainer(side) {
     var fadeIn = "fadeIn"+side;
-    var $li = $("<li class='animated visible "+fadeIn+"' data-animation='"+fadeIn+"'>");
-
-    $li.append(addDivBox(side));
-
-    return $li;
+    return $("<li class='animated visible "+fadeIn+"' data-animation='"+fadeIn+"'>");  
   }
 
-  function addDivBox(side) {
-    $div = $("<div>", {class: "timeline-panel "+side.toLowerCase()});
-    $div.append(addTitle('Iteration #3 - 40 hours'));
-    $div.append(addTask(4));
-    
-    return $div;
+  /**
+   * @return String <div class="timeline-panel right left"></div>
+   */
+  function createSecondContainer(side) {
+    return $("<div>", {class: "timeline-panel "+side.toLowerCase()});
   }
 
-  function addTitle(title) {
-    return $("<h4>", {text: title});
+  /**
+   * @return String <h4>Iteration #1 - 40 hours</h4> 
+   */
+  function createTitle(number, hours) {
+    return $("<h4>", {text: "Iteration #"+number+" - "+hours+" hours"});
   }
-
-  function addTask(tasks) {
-    $p = $("<p>");
-    $ul = $("<ul>");
-
-    for (i=1; i<= tasks; i++) {
-      $li = $("<li>", {text: "Task "+i})
-      $ul.append($li);
-    }
-    
-    return $p.append($ul);
-  }
-
   
+  /**
+   * @return String <li>Task Description</li>
+   */ 
+  function createTask(name) {
+
+  }
+    
 });

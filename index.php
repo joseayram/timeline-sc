@@ -16,7 +16,7 @@
   <body>
     <section id="history">
       <div class="title">
-        <h1>ESTIMATES</h1>
+        <h1>ESTIMATE</h1>
         <hr>
       </div>
         <div class="container">
@@ -51,15 +51,9 @@
       </div>
     </section>
 
-
     <script type="text/javascript" src="js/yaml.js"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
-    <script type="text/javascript">
-        var estimateYML = YAML.load('estimate.yml');
-        
-
-    </script>
   </body>
 </html>

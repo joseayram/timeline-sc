@@ -1,21 +1,17 @@
-iterations:
-  - iteration:
-      number: 1
-      hours: 40
-      tasks:
-        - task: Base App Config
-        - task: User Modeling
-        - task: User Session Manage
-        - task: User Sign facebook
-  - iteration:
-      number: 2
-      hours: 40
-      tasks:
-        - task: Linkedin Api Integration
-        - task: Build Your Own Profile (slide 1,2,3,4)
-        - task: Start Home Dashboard
-  - iteration:
-      number: 3
-      hours: 10
-      tasks:
-        - task: Linkedin Api Integration
+- iteration:
+    hours: 40
+    tasks:
+      - task: Base App Config
+      - task: User Modeling
+      - task: User Session Manage
+      - task: User Sign facebook
+- iteration:
+    hours: 40
+    tasks:
+      - task: Linkedin Api Integration
+      - task: Build Your Own Profile (slide 1,2,3,4)
+      - task: Start Home Dashboard
+- iteration:
+    hours: 10
+    tasks:
+      - task: Linkedin Api Integration
