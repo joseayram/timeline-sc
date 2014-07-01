@@ -1,10 +1,25 @@
 $(function() {
 
-  var configYML = YAML.load('estimate.yml');
   var flag = true;
   var number = 0;
+  var file = setFile();
+  var configYML = YAML.load('estimates/'+file+'.yml');
         
   configYML.forEach(loopElements);
+
+  /**
+   * Set filename for yaml config
+   */
+  function setFile() {
+    hash = (location.hash).substr(1);
+    
+    if (hash === "") {
+      return 'example';
+    }else{
+      return hash;
+    }
+    
+  }
 
   /**
    * Loop all Elements in Yaml File

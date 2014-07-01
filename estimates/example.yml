@@ -1,0 +1,19 @@
+- month: June
+- iteration:
+    hours: 40
+    tasks:
+      - task: Example task 1
+      - task: Example task 2
+      - task: Example task 3
+      - task: Example task 4
+- iteration:
+    hours: 40
+    tasks:
+      - task: Example task 5
+      - task: Example task 6
+      - task: Example task 7
+- iteration:
+    hours: 10
+    tasks:
+      - task: Example task 8
+- month: July
