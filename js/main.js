@@ -9,18 +9,13 @@ $(function() {
    * Loop all Elements in Yaml File
    */
   function loopElements(element, index, array) {
-    strSide = side();
+    if (configYML[index].month != undefined) {
+      $element = createMonth(configYML[index].month);
+    } else if (configYML[index].iteration != undefined) {
+      $element = createIteration(index);
+    }
 
-    $firstContainer = createFirstContainer(strSide);
-    $secondContainer = createSecondContainer(strSide);
-    $title = createTitle(index+1, configYML[index].iteration.hours);
-    $tasks = createTasks(index);
-    
-    $secondContainer.append($title);
-    $secondContainer.append($tasks);
-    $firstContainer.append($secondContainer);
-
-    $(".timeline").append($firstContainer);
+    $(".timeline").append($element);
   }
 
   /**
@@ -41,8 +36,26 @@ $(function() {
   /**
    * @return <li class="month">MONTH</li>
    */
-  function addMonth(monthName) {
+  function createMonth(monthName) {
     return $("<li>", {text: monthName.toUpperCase(), class: "month"});
+  }
+
+  /**
+   * @return String
+   */
+  function createIteration(index) {
+    strSide = side();
+
+    $firstContainer = createFirstContainer(strSide);
+    $secondContainer = createSecondContainer(strSide);
+    $title = createTitle(index+1, configYML[index].iteration.hours);
+    $tasks = createTasks(index);
+    
+    $secondContainer.append($title);
+    $secondContainer.append($tasks);
+    
+    return $firstContainer.append($secondContainer);
+    
   }
 
   /**

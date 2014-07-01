@@ -1,3 +1,4 @@
+- month: June
 - iteration:
     hours: 40
     tasks:
@@ -15,3 +16,4 @@
     hours: 10
     tasks:
       - task: Linkedin Api Integration
+- month: July

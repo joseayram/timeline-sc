@@ -20,9 +20,7 @@
         <hr>
       </div>
         <div class="container">
-          <ul class="timeline">
-            <li class="month">JUNE</li>
-          </ul>
+          <ul class="timeline"></ul>
       </div>
     </section>
 
