@@ -1,6 +1,11 @@
 # Timeline for Proposals
 
-This is a script that allow us to show timelines to clients.
+This codebase allows us to create timelines quickly.
+
+## Showcase
+
+![](https://raw.githubusercontent.com/ivanacostarubio/timeline-sc/master/screenshot.png)
+
 
 ## Install
 
@@ -10,11 +15,11 @@ This is a script that allow us to show timelines to clients.
 
 3. **Run**: rackup
 
-## How can i use?
+## How
 
-Create a yaml config file with the name that you decide (without spaces) and the .yml extension and put into /public/estimates/
+Create a yaml file with the name that you want (without spaces) and put into /public/estimates/
 
-Complete the information for your config. The structure for the file is the next:
+Add information as needed following the structure:
 
 1. month: This action display a circle with the month name. 
 2. iteration: is the node for iteration. **You shouldn't put any text here**.
