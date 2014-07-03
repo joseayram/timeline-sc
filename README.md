@@ -1,6 +1,6 @@
 # Timeline for Proposals
 
-This is a script template for show our proposals to the clients.
+This is a script that allow us to show timelines to clients.
 
 ## Install
 
