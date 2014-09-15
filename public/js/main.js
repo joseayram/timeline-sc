@@ -14,7 +14,7 @@ $(function() {
     hash = (location.hash).substr(1);
     
     if (hash === "") {
-      return 'example';
+      return 'me.co';
     }else{
       return hash;
     }
