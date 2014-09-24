@@ -64,6 +64,10 @@ section {
   font-weight: bold
 }
 
+#entrada .subtitle p{
+  margin: 0 0 10px;
+}
+
 #header{
   padding-top: 2%; 
   padding-bottom: 2%;
