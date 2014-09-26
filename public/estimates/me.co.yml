@@ -1,3 +1,15 @@
+-
+  title: Sample Project
+  subtitle: Sample Project short Description
+  descrition: longer decription about the project
+  velocity: 30 hours per week until project is completed.
+  delivery: Late October 2014.
+  budget: Approximate total
+  team:
+    - 1 Sr Designer/ UX / Project Manager . Point of contact.
+    - 1 Engineer. Integration. Programing. HTML CSS.
+    - 1 Jr Q/A.
+
 - month: June
 - iteration:
     hours: 40
