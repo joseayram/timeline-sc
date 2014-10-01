@@ -27,11 +27,35 @@ $(function() {
   function loopElements(element, index, array) {
     if (configYML[index].month != undefined) {
       $element = createMonth(configYML[index].month);
+      $(".timeline").append($element);
     } else if (configYML[index].iteration != undefined) {
       $element = createIteration(index);
+      $(".timeline").append($element);
+    }else if (configYML[index].title!= undefined){
+      createHeader(element);
     }
 
-    $(".timeline").append($element);
+  }
+
+
+  /** 
+   * This function puts info on the page.
+   * returns nothings.
+   * modifies a lot of stuff on the website
+  */
+  function createHeader(o){
+    console.log(o);
+    $(".title h1:first").html(o.title);
+    $(".subtitle p:first").html(o.subtitle);
+    $(".subtitle:nth-child(2) p").html(o.descrition);
+    $(".velocity").html(o.velocity);
+    $(".delivery-date").html(o.delivery);
+    $(".budget").html(o.budget);
+    $(".team").html("");
+    o.team.forEach(function(m,i,a){
+      $(".team").append("<p>" + m  + "</p>")
+      console.log(m);
+    })
   }
 
   /**
@@ -49,12 +73,14 @@ $(function() {
 
   }
 
+
   /**
    * @return <li class="month">MONTH</li>
    */
   function createMonth(monthName) {
     return $("<li>", {text: monthName.toUpperCase(), class: "month"});
   }
+
 
   /**
    * @return String
