@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'museosans';
+  src: url("/typography/museosans_500-webfont.eot");
+  src: url("/typography/museosans_500-webfont.eot?#iefix") format("embedded-opentype"), url("/typography/museosans_500-webfont.woff") format("woff"), url("/typography/museosans_500-webfont.ttf") format("truetype"), url("/typography/museosans_500-webfont.svg#museo_sans500") format("svg"); }
+
+@font-face {
+  font-family: 'museo';
+  src: url("/typography/museo300-regular-webfont.eot");
+  src: url("/typography/museo300-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/typography/museo300-regular-webfont.woff") format("woff"), url("/typography/museo300-regular-webfont.ttf") format("truetype"), url("/typography/museo300-regular-webfont.svg#museo300") format("svg"); }
+
 /* =Common Styles
 -------------------------------------------------------------- */
 
@@ -7,8 +17,14 @@ body {
 }
 
 p {
-  font-family: 'Lato', 'sans-serif';
+  font-family: 'museosans', 'sans-serif' !important;
+  line-height: 24px;
 }
+
+strong{
+  font-family: 'museosans', 'sans-serif' !important;
+}
+
 
 section {
   padding-top: 15px;
